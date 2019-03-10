@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B06315E92233718000A40D1D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B06315E82233718000A40D1D /* AppDelegate.m */; };
+		B06315EB2233718000A40D1D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B06315EA2233718000A40D1D /* GameScene.sks */; };
+		B06315ED2233718000A40D1D /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B06315EC2233718000A40D1D /* Actions.sks */; };
+		B06315F32233718000A40D1D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B06315F22233718000A40D1D /* GameViewController.m */; };
+		B06315F62233718000A40D1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06315F42233718000A40D1D /* Main.storyboard */; };
+		B06315F82233718100A40D1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B06315F72233718100A40D1D /* Assets.xcassets */; };
+		B06315FB2233718100A40D1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B06315F92233718100A40D1D /* LaunchScreen.storyboard */; };
+		B06315FE2233718100A40D1D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B06315FD2233718100A40D1D /* main.m */; };
+		B06316082233718100A40D1D /* HighwayTravelerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B06316072233718100A40D1D /* HighwayTravelerTests.m */; };
+		B06316132233718100A40D1D /* HighwayTravelerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B06316122233718100A40D1D /* HighwayTravelerUITests.m */; };
+		B06316222233732000A40D1D /* HighwayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B06316212233732000A40D1D /* HighwayView.m */; };
+		B06316252233733600A40D1D /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = B06316242233733600A40D1D /* Car.m */; };
+		B063162822348FEF00A40D1D /* MainGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B063162722348FEF00A40D1D /* MainGameViewController.m */; };
+		B063162B2234900F00A40D1D /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B063162A2234900F00A40D1D /* GameOverViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B06316042233718100A40D1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B06315DC2233718000A40D1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B06315E32233718000A40D1D;
+			remoteInfo = HighwayTraveler;
+		};
+		B063160F2233718100A40D1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B06315DC2233718000A40D1D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B06315E32233718000A40D1D;
+			remoteInfo = HighwayTraveler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B06315E42233718000A40D1D /* HighwayTraveler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighwayTraveler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B06315E72233718000A40D1D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B06315E82233718000A40D1D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B06315EA2233718000A40D1D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		B06315EC2233718000A40D1D /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		B06315F12233718000A40D1D /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		B06315F22233718000A40D1D /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		B06315F52233718000A40D1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B06315F72233718100A40D1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B06315FA2233718100A40D1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B06315FC2233718100A40D1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B06315FD2233718100A40D1D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B06316032233718100A40D1D /* HighwayTravelerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HighwayTravelerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B06316072233718100A40D1D /* HighwayTravelerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HighwayTravelerTests.m; sourceTree = "<group>"; };
+		B06316092233718100A40D1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B063160E2233718100A40D1D /* HighwayTravelerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HighwayTravelerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B06316122233718100A40D1D /* HighwayTravelerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HighwayTravelerUITests.m; sourceTree = "<group>"; };
+		B06316142233718100A40D1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B06316202233731600A40D1D /* HighwayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HighwayView.h; sourceTree = "<group>"; };
+		B06316212233732000A40D1D /* HighwayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HighwayView.m; sourceTree = "<group>"; };
+		B06316232233732A00A40D1D /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
+		B06316242233733600A40D1D /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		B063162622348FDE00A40D1D /* MainGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainGameViewController.h; sourceTree = "<group>"; };
+		B063162722348FEF00A40D1D /* MainGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainGameViewController.m; sourceTree = "<group>"; };
+		B06316292234900000A40D1D /* GameOverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
+		B063162A2234900F00A40D1D /* GameOverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B06315E12233718000A40D1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B06316002233718100A40D1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B063160B2233718100A40D1D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B06315DB2233718000A40D1D = {
+			isa = PBXGroup;
+			children = (
+				B06315E62233718000A40D1D /* HighwayTraveler */,
+				B06316062233718100A40D1D /* HighwayTravelerTests */,
+				B06316112233718100A40D1D /* HighwayTravelerUITests */,
+				B06315E52233718000A40D1D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B06315E52233718000A40D1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B06315E42233718000A40D1D /* HighwayTraveler.app */,
+				B06316032233718100A40D1D /* HighwayTravelerTests.xctest */,
+				B063160E2233718100A40D1D /* HighwayTravelerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B06315E62233718000A40D1D /* HighwayTraveler */ = {
+			isa = PBXGroup;
+			children = (
+				B06315E72233718000A40D1D /* AppDelegate.h */,
+				B06315E82233718000A40D1D /* AppDelegate.m */,
+				B06315EA2233718000A40D1D /* GameScene.sks */,
+				B06315EC2233718000A40D1D /* Actions.sks */,
+				B06316202233731600A40D1D /* HighwayView.h */,
+				B06316212233732000A40D1D /* HighwayView.m */,
+				B06316232233732A00A40D1D /* Car.h */,
+				B06316242233733600A40D1D /* Car.m */,
+				B063162622348FDE00A40D1D /* MainGameViewController.h */,
+				B063162722348FEF00A40D1D /* MainGameViewController.m */,
+				B06316292234900000A40D1D /* GameOverViewController.h */,
+				B063162A2234900F00A40D1D /* GameOverViewController.m */,
+				B06315F12233718000A40D1D /* GameViewController.h */,
+				B06315F22233718000A40D1D /* GameViewController.m */,
+				B06315F42233718000A40D1D /* Main.storyboard */,
+				B06315F72233718100A40D1D /* Assets.xcassets */,
+				B06315F92233718100A40D1D /* LaunchScreen.storyboard */,
+				B06315FC2233718100A40D1D /* Info.plist */,
+				B06315FD2233718100A40D1D /* main.m */,
+			);
+			path = HighwayTraveler;
+			sourceTree = "<group>";
+		};
+		B06316062233718100A40D1D /* HighwayTravelerTests */ = {
+			isa = PBXGroup;
+			children = (
+				B06316072233718100A40D1D /* HighwayTravelerTests.m */,
+				B06316092233718100A40D1D /* Info.plist */,
+			);
+			path = HighwayTravelerTests;
+			sourceTree = "<group>";
+		};
+		B06316112233718100A40D1D /* HighwayTravelerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B06316122233718100A40D1D /* HighwayTravelerUITests.m */,
+				B06316142233718100A40D1D /* Info.plist */,
+			);
+			path = HighwayTravelerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B06315E32233718000A40D1D /* HighwayTraveler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B06316172233718100A40D1D /* Build configuration list for PBXNativeTarget "HighwayTraveler" */;
+			buildPhases = (
+				B06315E02233718000A40D1D /* Sources */,
+				B06315E12233718000A40D1D /* Frameworks */,
+				B06315E22233718000A40D1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HighwayTraveler;
+			productName = HighwayTraveler;
+			productReference = B06315E42233718000A40D1D /* HighwayTraveler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B06316022233718100A40D1D /* HighwayTravelerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B063161A2233718100A40D1D /* Build configuration list for PBXNativeTarget "HighwayTravelerTests" */;
+			buildPhases = (
+				B06315FF2233718100A40D1D /* Sources */,
+				B06316002233718100A40D1D /* Frameworks */,
+				B06316012233718100A40D1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B06316052233718100A40D1D /* PBXTargetDependency */,
+			);
+			name = HighwayTravelerTests;
+			productName = HighwayTravelerTests;
+			productReference = B06316032233718100A40D1D /* HighwayTravelerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B063160D2233718100A40D1D /* HighwayTravelerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B063161D2233718100A40D1D /* Build configuration list for PBXNativeTarget "HighwayTravelerUITests" */;
+			buildPhases = (
+				B063160A2233718100A40D1D /* Sources */,
+				B063160B2233718100A40D1D /* Frameworks */,
+				B063160C2233718100A40D1D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B06316102233718100A40D1D /* PBXTargetDependency */,
+			);
+			name = HighwayTravelerUITests;
+			productName = HighwayTravelerUITests;
+			productReference = B063160E2233718100A40D1D /* HighwayTravelerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B06315DC2233718000A40D1D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Peter Golden";
+				TargetAttributes = {
+					B06315E32233718000A40D1D = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					B06316022233718100A40D1D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B06315E32233718000A40D1D;
+					};
+					B063160D2233718100A40D1D = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B06315E32233718000A40D1D;
+					};
+				};
+			};
+			buildConfigurationList = B06315DF2233718000A40D1D /* Build configuration list for PBXProject "HighwayTraveler" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B06315DB2233718000A40D1D;
+			productRefGroup = B06315E52233718000A40D1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B06315E32233718000A40D1D /* HighwayTraveler */,
+				B06316022233718100A40D1D /* HighwayTravelerTests */,
+				B063160D2233718100A40D1D /* HighwayTravelerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B06315E22233718000A40D1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B06315F62233718000A40D1D /* Main.storyboard in Resources */,
+				B06315EB2233718000A40D1D /* GameScene.sks in Resources */,
+				B06315F82233718100A40D1D /* Assets.xcassets in Resources */,
+				B06315FB2233718100A40D1D /* LaunchScreen.storyboard in Resources */,
+				B06315ED2233718000A40D1D /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B06316012233718100A40D1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B063160C2233718100A40D1D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B06315E02233718000A40D1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B063162B2234900F00A40D1D /* GameOverViewController.m in Sources */,
+				B06316252233733600A40D1D /* Car.m in Sources */,
+				B06315F32233718000A40D1D /* GameViewController.m in Sources */,
+				B06315FE2233718100A40D1D /* main.m in Sources */,
+				B063162822348FEF00A40D1D /* MainGameViewController.m in Sources */,
+				B06316222233732000A40D1D /* HighwayView.m in Sources */,
+				B06315E92233718000A40D1D /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B06315FF2233718100A40D1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B06316082233718100A40D1D /* HighwayTravelerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B063160A2233718100A40D1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B06316132233718100A40D1D /* HighwayTravelerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B06316052233718100A40D1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B06315E32233718000A40D1D /* HighwayTraveler */;
+			targetProxy = B06316042233718100A40D1D /* PBXContainerItemProxy */;
+		};
+		B06316102233718100A40D1D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B06315E32233718000A40D1D /* HighwayTraveler */;
+			targetProxy = B063160F2233718100A40D1D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B06315F42233718000A40D1D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B06315F52233718000A40D1D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B06315F92233718100A40D1D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B06315FA2233718100A40D1D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B06316152233718100A40D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B06316162233718100A40D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B06316182233718100A40D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HighwayTraveler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.HighwayTraveler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B06316192233718100A40D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HighwayTraveler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.HighwayTraveler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B063161B2233718100A40D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HighwayTravelerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.HighwayTravelerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HighwayTraveler.app/HighwayTraveler";
+			};
+			name = Debug;
+		};
+		B063161C2233718100A40D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HighwayTravelerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.HighwayTravelerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HighwayTraveler.app/HighwayTraveler";
+			};
+			name = Release;
+		};
+		B063161E2233718100A40D1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HighwayTravelerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.HighwayTravelerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HighwayTraveler;
+			};
+			name = Debug;
+		};
+		B063161F2233718100A40D1D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = HighwayTravelerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.HighwayTravelerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HighwayTraveler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B06315DF2233718000A40D1D /* Build configuration list for PBXProject "HighwayTraveler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B06316152233718100A40D1D /* Debug */,
+				B06316162233718100A40D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B06316172233718100A40D1D /* Build configuration list for PBXNativeTarget "HighwayTraveler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B06316182233718100A40D1D /* Debug */,
+				B06316192233718100A40D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B063161A2233718100A40D1D /* Build configuration list for PBXNativeTarget "HighwayTravelerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B063161B2233718100A40D1D /* Debug */,
+				B063161C2233718100A40D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B063161D2233718100A40D1D /* Build configuration list for PBXNativeTarget "HighwayTravelerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B063161E2233718100A40D1D /* Debug */,
+				B063161F2233718100A40D1D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B06315DC2233718000A40D1D /* Project object */;
+}

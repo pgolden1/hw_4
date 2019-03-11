@@ -9,5 +9,10 @@
 #ifndef GameOverViewController_h
 #define GameOverViewController_h
 
+#import <UIKit/UIKit.h>
 
+@interface GameOverViewController: UIViewController
+
+
+@end
 #endif /* GameOverViewController_h */

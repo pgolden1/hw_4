@@ -7,3 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MainGameViewController.h"
+
+@implementation MainGVC
+
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    
+    // Set the delegate
+    self.hwv.delegate = self;
+}
+
+-(void)highwayView:(HighwayView *)view performSegueWithIdentifier:(NSString *)identifier {
+    [self performSegueWithIdentifier:identifier sender:self];
+}
+
+@end

@@ -21,6 +21,7 @@
 		B06316252233733600A40D1D /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = B06316242233733600A40D1D /* Car.m */; };
 		B063162822348FEF00A40D1D /* MainGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B063162722348FEF00A40D1D /* MainGameViewController.m */; };
 		B063162B2234900F00A40D1D /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B063162A2234900F00A40D1D /* GameOverViewController.m */; };
+		B063162E2235B4B600A40D1D /* Universe.m in Sources */ = {isa = PBXBuildFile; fileRef = B063162C2235B4B600A40D1D /* Universe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		B063162722348FEF00A40D1D /* MainGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainGameViewController.m; sourceTree = "<group>"; };
 		B06316292234900000A40D1D /* GameOverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
 		B063162A2234900F00A40D1D /* GameOverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
+		B063162C2235B4B600A40D1D /* Universe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Universe.m; sourceTree = "<group>"; };
+		B063162D2235B4B600A40D1D /* Universe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Universe.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 		B06315E62233718000A40D1D /* HighwayTraveler */ = {
 			isa = PBXGroup;
 			children = (
+				B063162D2235B4B600A40D1D /* Universe.h */,
+				B063162C2235B4B600A40D1D /* Universe.m */,
 				B06315E72233718000A40D1D /* AppDelegate.h */,
 				B06315E82233718000A40D1D /* AppDelegate.m */,
 				B06315EA2233718000A40D1D /* GameScene.sks */,
@@ -296,6 +301,7 @@
 				B06315FE2233718100A40D1D /* main.m in Sources */,
 				B063162822348FEF00A40D1D /* MainGameViewController.m in Sources */,
 				B06316222233732000A40D1D /* HighwayView.m in Sources */,
+				B063162E2235B4B600A40D1D /* Universe.m in Sources */,
 				B06315E92233718000A40D1D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,3 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#import "GameOverViewController.h"
+
+@implementation GameOverViewController
+
+@end

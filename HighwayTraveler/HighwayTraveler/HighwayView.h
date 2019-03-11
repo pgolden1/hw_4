@@ -10,19 +10,46 @@
 #define HighwayView_h
 #import <UIKit/UIKit.h>
 
+@protocol HighwayViewDelegate;
+
 @interface HighwayView: UIView
 
+@property (nonatomic, weak) id<HighwayViewDelegate> delegate;
 
-@property (strong, nonatomic) UILabel* currentSpeed;
-@property (strong, nonatomic) UILabel* currentSscore;
+@property (nonatomic) int currSpeed;
+@property (nonatomic) int currLimit;
+@property (nonatomic) int currScore;
+@property (nonatomic) int currDistance;
+@property (nonatomic) int currCar;
+@property (nonatomic) int currLane;
+@property (nonatomic, strong) NSTimer* timer;
 
-@property (strong, nonatomic) UIButton* cLaneL;
-@property (strong, nonatomic) UIButton* cLaneR;
-@property (strong, nonatomic) UIButton* sUp;
-@property (strong, nonatomic) UIButton* sDown;
-@property (strong, nonatomic) UIButton* menu;
+@property (nonatomic, strong) NSArray* cars;
+@property (nonatomic, strong) NSArray* carIcons;
 
+@property (weak, nonatomic) IBOutlet UILabel *currentSpeed;
+@property (weak, nonatomic) IBOutlet UILabel *speedLimit;
+@property (weak, nonatomic) IBOutlet UILabel *currentScore;
+@property (weak, nonatomic) IBOutlet UIImageView *currentCar;
 
+@property (strong, nonatomic) IBOutlet UIButton* cLaneL;
+@property (strong, nonatomic) IBOutlet UIButton* cLaneR;
+@property (strong, nonatomic) IBOutlet UIButton* sUp;
+@property (strong, nonatomic) IBOutlet UIButton* sDown;
+@property (strong, nonatomic) IBOutlet UIButton* menu;
+@property (strong, nonatomic) IBOutlet UIButton* endGame;
+
+- (IBAction) changeLaneL: (UIButton*) sender;
+- (IBAction) changeLaneR: (UIButton*) sender;
+- (IBAction) speedUp: (UIButton*) sender;
+- (IBAction) speedDown: (UIButton*) sender;
+- (void) tick: (id) sender;
+
+@end
+
+@protocol HighwayViewDelegate
+
+-(void)highwayView: (HighwayView*)view performSegueWithIdentifier:(NSString *)identifier;
 
 @end
 

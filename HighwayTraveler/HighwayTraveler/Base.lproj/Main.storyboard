@@ -167,11 +167,11 @@ not speeding!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="road" translatesAutoresizingMaskIntoConstraints="NO" id="vjX-5j-uiG">
-                                <rect key="frame" x="57" y="87" width="301" height="665"/>
+                                <rect key="frame" x="20" y="119" width="374" height="633"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKu-de-hdH">
-                                <rect key="frame" x="59" y="44" width="39" height="30"/>
+                                <rect key="frame" x="23" y="67" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Menu"/>
                                 <connections>
@@ -179,14 +179,14 @@ not speeding!</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKI-Lx-BCN">
-                                <rect key="frame" x="286" y="49" width="50" height="21"/>
+                                <rect key="frame" x="319" y="72" width="50" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htb-bN-3zG">
-                                <rect key="frame" x="344" y="49" width="11" height="21"/>
+                                <rect key="frame" x="377" y="72" width="11" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -203,16 +203,33 @@ not speeding!</string>
                                 <rect key="frame" x="74" y="799" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Left"/>
+                                <connections>
+                                    <action selector="changeLaneL:" destination="dbf-nA-zL2" eventType="touchUpInside" id="aMh-ZX-Ky9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7J-5p-9tX">
                                 <rect key="frame" x="139" y="799" width="36" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Right"/>
+                                <connections>
+                                    <action selector="changeLaneR:" destination="dbf-nA-zL2" eventType="touchUpInside" id="AUi-6i-GLW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWh-Vc-UME">
                                 <rect key="frame" x="251" y="799" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Up"/>
+                                <connections>
+                                    <action selector="speedUp:" destination="dbf-nA-zL2" eventType="touchUpInside" id="7JD-ss-LH2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yd4-ok-u0z">
+                                <rect key="frame" x="300" y="799" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Down"/>
+                                <connections>
+                                    <action selector="speedDown:" destination="dbf-nA-zL2" eventType="touchUpInside" id="4bJ-HE-igz"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Speed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H30-9N-DdU">
                                 <rect key="frame" x="239" y="780" width="54" height="21"/>
@@ -228,14 +245,6 @@ not speeding!</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qit-L2-DVy">
-                                <rect key="frame" x="364" y="722" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="End"/>
-                                <connections>
-                                    <segue destination="gxj-Ab-bUF" kind="show" id="lCv-xL-Vbc"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Limit:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBb-MO-hXM">
                                 <rect key="frame" x="245" y="836" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -250,14 +259,40 @@ not speeding!</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yd4-ok-u0z">
-                                <rect key="frame" x="300" y="799" width="39" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qlo-DI-wlt">
+                                <rect key="frame" x="170" y="42" width="132" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Down"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgU-yl-8gr">
+                                <rect key="frame" x="120" y="71" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iL1-6k-ZAX">
+                                <rect key="frame" x="376" y="780" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="GameEnd"/>
+                                <state key="normal" title="End"/>
+                                <connections>
+                                    <segue destination="gxj-Ab-bUF" kind="show" id="DSE-b3-a2q"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.74551883542193975" green="1" blue="0.98000726944523209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="eR0-NS-QQV"/>
+                        <connections>
+                            <outlet property="cLaneL" destination="XIV-JT-XtF" id="QCk-6O-Xty"/>
+                            <outlet property="cLaneR" destination="Z7J-5p-9tX" id="k7D-3o-j6P"/>
+                            <outlet property="currentCar" destination="Qlo-DI-wlt" id="S0M-4T-yCj"/>
+                            <outlet property="currentScore" destination="htb-bN-3zG" id="J29-ev-hUJ"/>
+                            <outlet property="currentSpeed" destination="IOb-MQ-Qnp" id="7i5-is-l2g"/>
+                            <outlet property="menu" destination="DKu-de-hdH" id="L9t-I5-pNr"/>
+                            <outlet property="sDown" destination="yd4-ok-u0z" id="19L-Uq-4fW"/>
+                            <outlet property="sUp" destination="lWh-Vc-UME" id="W0k-SA-0LT"/>
+                            <outlet property="speedLimit" destination="Jhv-er-eqa" id="u7h-gH-isQ"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEg-EO-F26" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -305,7 +340,7 @@ not speeding!</string>
                                 <rect key="frame" x="142" y="683" width="131" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back to Main Menu">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="3nx-kh-fET" kind="unwind" unwindAction="unwindToThisViewController:" id="8fl-4d-Nsm"/>

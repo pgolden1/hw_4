@@ -9,8 +9,13 @@
 #ifndef HighwayView_h
 #define HighwayView_h
 #import <UIKit/UIKit.h>
+#import "Universe.h"
 
-@protocol HighwayViewDelegate;
+@protocol HighwayViewDelegate
+
+-(void)highwayView: (UIView*)view performSegueWithIdentifier:(NSString *)identifier;
+
+@end
 
 @interface HighwayView: UIView
 
@@ -21,8 +26,14 @@
 @property (nonatomic) int currScore;
 @property (nonatomic) int currDistance;
 @property (nonatomic) int currCar;
-@property (nonatomic) int currLane;
+@property (nonatomic) int counter;
+@property (nonatomic) bool hasBeenSet;
+@property (nonatomic) bool availToChange;
+@property (nonatomic) bool changingLane;
+@property (nonatomic) bool changingDirection; // true for right
+@property (nonatomic, strong) NSNumber* currLane;
 @property (nonatomic, strong) NSTimer* timer;
+@property (nonatomic) Universe* u;
 
 @property (nonatomic, strong) NSArray* cars;
 @property (nonatomic, strong) NSArray* carIcons;
@@ -44,12 +55,6 @@
 - (IBAction) speedUp: (UIButton*) sender;
 - (IBAction) speedDown: (UIButton*) sender;
 - (void) tick: (id) sender;
-
-@end
-
-@protocol HighwayViewDelegate
-
--(void)highwayView: (HighwayView*)view performSegueWithIdentifier:(NSString *)identifier;
 
 @end
 

@@ -18,7 +18,7 @@
     self.hwv.delegate = self;
 }
 
--(void)highwayView:(HighwayView *)view performSegueWithIdentifier:(NSString *)identifier {
+-(void)highwayView:(UIView *)view performSegueWithIdentifier:(NSString *)identifier {
     [self performSegueWithIdentifier:identifier sender:self];
 }
 

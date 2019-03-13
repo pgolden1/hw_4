@@ -15,7 +15,7 @@
 
 @property (weak, nonatomic) HighwayView* hwv;
 
--(void)highwayView:(HighwayView *)view performSegueWithIdentifier:(NSString *)identifier;
+-(void)highwayView:(UIView *)view performSegueWithIdentifier:(NSString *)identifier;
 
 @end
 

@@ -19,15 +19,19 @@
     
     if(self){
     
-        _currLane = 2;
-        _currLimit = 45;
-        _currSpeed = 50;
+        _currLane = [NSNumber numberWithInt: 2];
+        _currLimit = 55;
+        _currSpeed = 45;
         _currScore = 0;
         _currDistance = 0;
-        
+        _counter = 100;
+        _hasBeenSet = false;
+        _availToChange = false;
+        _changingLane = false;
+        _changingLane = true;
+        _u = [Universe getSingleton];
         _currCar = arc4random_uniform(12);
         
-        NSLog(@"%d", _currCar);
         
         _cars = [NSArray arrayWithObjects: [UIImage imageNamed: @"blue"],
                   [UIImage imageNamed: @"fuscia"],
@@ -57,12 +61,11 @@
                  [UIImage imageNamed: @"yellowrotated"],
                  nil];
         
-        _currentCar.image = (UIImage*) _carIcons[_currCar];
-        
         self.timer = [NSTimer scheduledTimerWithTimeInterval:.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
             [self performSelectorOnMainThread:@selector(tick:) withObject:self.timer waitUntilDone:NO];
         }];
     }
+    
     return self;
 }
 
@@ -70,7 +73,8 @@
 
 
 -(IBAction) changeLaneL: (UIButton*) sender{
-   _currLane--;
+    
+   _currLane = [NSNumber numberWithInt: ([_currLane intValue] - 1)];
     if(_currLane == 0){
         //fall off map, lose
     }
@@ -80,17 +84,20 @@
 }
 
 - (IBAction) changeLaneR: (UIButton*) sender{
-    _currLane++;
-    if(_currLane == 4){
+    /*_currLane = [NSNumber numberWithInt: ([_currLane intValue] + 1)];
+    _changingLane = true;
+    _changingDirection = true;
+    if([_currLane intValue] == 4){
         //fall off map, lose
-        Universe *u = [Universe getSingleton];
-        [u setDistance:0];
-        [u setDistance:0];
-        [self.delegate highwayView:self performSegueWithIdentifier:@"GameEnd"];
-    }
-    else{
+        [_u setDistance:0];
+        [_u setDistance:0];
         
     }
+    else{ 
+        
+    }*/
+    
+    [self.delegate highwayView:self performSegueWithIdentifier:@"GameEnd"]; // <= problem at the moment
 }
 
 - (IBAction) speedUp: (UIButton*) sender{
@@ -102,7 +109,47 @@
 }
 
 -(void) tick: (id) sender{
+    if(!_hasBeenSet){
+        _currentCar.image = (UIImage*) _carIcons[_currCar];
+        _hasBeenSet = true;
+    }
     
+    //changing display of current speed
+    NSString* speed = [NSString stringWithFormat:@"%d", _currSpeed];
+    [_currentSpeed setText: speed];
+
+    
+    //adjusting speed limit
+    if(_availToChange){
+        
+        int speedGen = arc4random_uniform(100);
+        
+        if(speedGen < 2 && _currLimit < 85){
+            _currLimit -= 5;
+            _availToChange = false;
+            _counter = 75;
+        }
+        
+        if(speedGen > 97 && _currLimit > 20){
+            _currLimit += 5;
+            _availToChange = false;
+            _counter = 75;
+        }
+    }
+    
+    if(_counter > 0) _counter--;
+    if(_counter == 0) _availToChange = true;
+    
+    NSString* newlimit = [NSString stringWithFormat:@"%d", _currLimit];
+    [_speedLimit setText: newlimit];
+    
+    //animation for changing lane
+    if(_changingLane){
+        if(_changingDirection){
+            
+            
+        }
+    }
     
 }
 

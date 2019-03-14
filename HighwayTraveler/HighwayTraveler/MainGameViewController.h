@@ -11,11 +11,8 @@
 #import "HighwayView.h"
 #import <UIKit/UIKit.h>
 
-@interface MainGVC : UIViewController <HighwayViewDelegate>
+@interface MainGVC : UIViewController
 
-@property (weak, nonatomic) HighwayView* hwv;
-
--(void)highwayView:(UIView *)view performSegueWithIdentifier:(NSString *)identifier;
 
 @end
 

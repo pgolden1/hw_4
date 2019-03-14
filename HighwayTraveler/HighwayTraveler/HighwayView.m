@@ -25,6 +25,7 @@
         _currScore = 0;
         _currDistance = 0;
         _counter = 100;
+        _currLane = [NSNumber numberWithInt: 3];
         _hasBeenSet = false;
         _availToChange = false;
         _changingLane = false;
@@ -70,12 +71,10 @@
 }
 
 
-
-
 -(IBAction) changeLaneL: (UIButton*) sender{
     
    _currLane = [NSNumber numberWithInt: ([_currLane intValue] - 1)];
-    if(_currLane == 0){
+    if([_currLane intValue] == 0){
         //fall off map, lose
     }
     else{
@@ -84,10 +83,10 @@
 }
 
 - (IBAction) changeLaneR: (UIButton*) sender{
-    /*_currLane = [NSNumber numberWithInt: ([_currLane intValue] + 1)];
+    _currLane = [NSNumber numberWithInt: ([_currLane intValue] + 1)];
     _changingLane = true;
     _changingDirection = true;
-    if([_currLane intValue] == 4){
+    if([_currLane intValue] == 5){
         //fall off map, lose
         [_u setDistance:0];
         [_u setDistance:0];
@@ -95,9 +94,7 @@
     }
     else{ 
         
-    }*/
-    
-    [self.delegate highwayView:self performSegueWithIdentifier:@"GameEnd"]; // <= problem at the moment
+    }
 }
 
 - (IBAction) speedUp: (UIButton*) sender{
@@ -106,6 +103,16 @@
 
 - (IBAction) speedDown: (UIButton*) sender{
     _currSpeed -= 5;
+}
+
+- (void) moveMarkers{
+    
+    //repeat for each marker
+    UIImageView* currentMarker = (UIImageView*) _marker1;
+    CGRect cMRect = currentMarker.frame;
+    cMRect.origin.y += 1;
+    _marker1.frame = cMRect;
+    
 }
 
 -(void) tick: (id) sender{
@@ -150,6 +157,8 @@
             
         }
     }
+    
+    //[self moveMarkers];
     
 }
 

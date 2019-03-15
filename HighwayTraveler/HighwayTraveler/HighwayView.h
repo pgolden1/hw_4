@@ -15,17 +15,21 @@
 
 @property (nonatomic) int currSpeed;
 @property (nonatomic) int currLimit;
-@property (nonatomic) int currScore;
-@property (nonatomic) int currDistance;
 @property (nonatomic) int currCar;
 @property (nonatomic) int counter;
+@property (nonatomic) int laneCounter;
+@property (nonatomic) float tickspeed;
+@property (nonatomic) float currScore;
+@property (nonatomic) float currDistance;
 @property (nonatomic) bool hasBeenSet;
 @property (nonatomic) bool availToChange;
 @property (nonatomic) bool changingLane;
 @property (nonatomic) bool changingDirection; // true for right
+@property (nonatomic) bool gameend;
+@property (nonatomic) bool copIconActive;
+@property (nonatomic) bool spawnCop;
 @property (nonatomic, strong) NSNumber* currLane;
 @property (nonatomic, strong) NSTimer* timer;
-@property (nonatomic) Universe* u;
 
 @property (nonatomic, strong) NSArray* cars;
 @property (nonatomic, strong) NSArray* carIcons;
@@ -34,6 +38,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *speedLimit;
 @property (weak, nonatomic) IBOutlet UILabel *currentScore;
 @property (weak, nonatomic) IBOutlet UIImageView *currentCar;
+@property (weak, nonatomic) IBOutlet UIImageView *road;
+@property (weak, nonatomic) IBOutlet UIImageView *you;
+@property (weak, nonatomic) IBOutlet UIImageView *copIcon;
+@property (weak, nonatomic) IBOutlet UIImageView *cop;
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *marker1;
 @property (weak, nonatomic) IBOutlet UIImageView *marker2;
@@ -47,12 +56,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *marker10;
 @property (weak, nonatomic) IBOutlet UIImageView *marker11;
 @property (weak, nonatomic) IBOutlet UIImageView *marker12;
-@property (weak, nonatomic) IBOutlet UIImageView *marker13;
-@property (weak, nonatomic) IBOutlet UIImageView *marker14;
-@property (weak, nonatomic) IBOutlet UIImageView *marker15;
-
-
-
 
 
 
@@ -67,7 +70,9 @@
 - (IBAction) speedUp: (UIButton*) sender;
 - (IBAction) speedDown: (UIButton*) sender;
 - (void) tick: (id) sender;
-- (void) moveMarkers;
+- (void) moveMarker: (UIImageView*) marker;
+- (double) max:(double) a withSecond: (double) b;
+- (void) endGame;
 
 @end
 
